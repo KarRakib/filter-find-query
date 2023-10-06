@@ -4,6 +4,7 @@ import Price from "./Price/Price"
 import Colors from "./Colors/Colors"
 import './sidebar.css'
 
+// eslint-disable-next-line react/prop-types
 const Sliderbar = ({ handleChange  }) => {
     return (
         <section className="sidebar">

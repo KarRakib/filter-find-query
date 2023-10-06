@@ -1,15 +1,16 @@
 import Input from '../../components/Input'
 import './Category.css'
-const Category = ({handleChange}) => {
-    return (
-        <div>
-            <h3 className="sidebar-title"> Category</h3>
-            <div>
-            <label className="sidebar-label-container">
-                    <input onChange={handleChange} type="radio" name='test' />
-                    <span className="checkmark"></span>All
-                </label>
-                <Input
+// eslint-disable-next-line react/prop-types
+const Category = ({ handleChange }) => {
+  return (
+    <div>
+      <h3 className="sidebar-title"> Category</h3>
+      <div>
+        <label className="sidebar-label-container">
+          <input onChange={handleChange} value="" type="radio" name='test' />
+          <span className="checkmark"></span>All
+        </label>
+        <Input
           handleChange={handleChange}
           value="sneakers"
           title="Sneakers"
@@ -33,10 +34,10 @@ const Category = ({handleChange}) => {
           title="Heels"
           name="test"
         />
-               
-                             
-            </div>
-        </div>
-    )
+
+
+      </div>
+    </div>
+  )
 }
 export default Category

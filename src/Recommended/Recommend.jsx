@@ -1,5 +1,6 @@
 import Button from '../components/Button'
 import './Recommend.css'
+// eslint-disable-next-line react/prop-types
 const Recommend = ({handleClick})=>{
     return (
         <div>

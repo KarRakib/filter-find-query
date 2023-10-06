@@ -1,8 +1,9 @@
-const Input = ({ handleChange, value, title, name, color }) => {
+// eslint-disable-next-line react/prop-types
+const Input = ({ handleInputChange, value, title, name, color }) => {
     return (
-      <label className="sidebar-label-container">
-        <input onChange={handleChange} type="radio" value={value} name={name} />
-        <span className="checkmark" style={{ backgroundColor: color }}></span>
+      <label className="pointer text-xl">
+        <input className="w-4 h-4 mx-1" onChange={handleInputChange} type="radio" value={value} name={name} />
+        <span className="bg-[#eee]" style={{ backgroundColor: color }}></span>
         {title}
       </label>
     );
