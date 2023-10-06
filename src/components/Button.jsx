@@ -7,9 +7,9 @@ const Button = ({ onClickHandler, value, title }) => {
     setIsActive(!isActive)
     onClickHandler(value)
   }
-  const buttonClassName = isActive? 'btn btn-success active' : 'btn btn-success';
+  
     return (
-      <button onClick={onClickHandler} value={value} className={buttonClassName}>
+      <button onClick={onClickHandler} value={value} className='btn'>
         {title}
       </button>
     );
