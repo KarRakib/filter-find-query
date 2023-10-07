@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci'
 import { BiSearch } from 'react-icons/bi'
+import { AiOutlineLogin} from 'react-icons/ai'
 import { BsChevronCompactUp } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
@@ -12,6 +13,7 @@ import Button from '../components/Button';
 const CheckBar = ({ query, handleQuery, handleClicked }) => {
     const [showProfile, setShowProfile] = useState(false)
     const [showNav, setShowNav] = useState(false)
+    const user = false
 
     return (
         <div>
@@ -41,18 +43,23 @@ const CheckBar = ({ query, handleQuery, handleClicked }) => {
                         />
 
                     </div>
-                    <div onClick={() => setShowProfile(!showProfile)} className='relative cursor-pointer'>
-                        <img src="user.jpg" className='w-[35px] h-[35px] rounded-full object-cover' alt="" />
-                        <div className={`absolute bg-white z-[2] rounded-lg shadow-lg ${showProfile ? "" : "hidden"}`}>
-
-                        </div>
+                  {
+                    user?   <div onClick={() => setShowProfile(!showProfile)} className='relative cursor-pointer'>
+                    <img src="user.jpg" className='w-[35px] h-[35px] rounded-full object-cover' alt="" />
+                    <div className={`absolute bg-white z-[2] rounded-lg shadow-lg ${showProfile ? "" : "hidden"}`}>
+                    <AiOutlineLogin/>
                     </div>
+                </div>: 
+                <Link to={'/register'}>
+                LogIn
+                </Link>
+                  }
 
                     <Link href='/cart'>
                         <div className='p-2 bg-gray-100 rounded-full'><CiShoppingCart size={20} /></div>
                     </Link>
 
-                                       <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>
+                    <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>
                         <BsChevronCompactUp className={`transition ease-in duration-150 ${showNav ? "rotate-180" : "0"}`} />
                     </span>
                 </div>

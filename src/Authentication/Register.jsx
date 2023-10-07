@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import  { useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 const RegisterForm = () => {
   const {userRegister,userUpdateProfile} = useContext(AuthContext)
@@ -128,6 +128,7 @@ const navigate = useNavigate()
             Register
           </button>
         </form>
+      <div> Alrady Register  Please  <Link to={'/login'} className='text-blue-500'> Login</Link> </div>
       </div>
     </div>
   );
