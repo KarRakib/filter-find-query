@@ -1,16 +1,19 @@
-import AuthProvider from "./Provider/AuthProvider";
+import { useContext } from "react";
+import AuthProvider from "./Context/AuthProvider";
 import Route from "./Router/Route";
+import ProductContext from "./Context/ProductsContext";
 
 
 const App = () => {
-  
+
   return (
     <div>
-    <AuthProvider>
-      
-    <Route/>
-    </AuthProvider>
-      
+      <AuthProvider>
+        <ProductContext>
+          <Route />
+        </ProductContext>
+      </AuthProvider>
+
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Home from '../Home/Home';
 import Card from '../components/Card';
 import RegisterForm from '../Authentication/Register';
 import LogIn from '../Authentication/LogIn';
+import AddProducts from '../Products/AddProducts';
 
 const Route = () => {
   const [products, setProducts] = useState([]);
@@ -55,6 +56,7 @@ const Route = () => {
       reviews={product.reviews}
       prevPrice={product.prevPrice}
       newPrice={product.newPrice}
+      _id={product._id}
     />
   ));
     const router = createBrowserRouter([
@@ -73,6 +75,9 @@ const Route = () => {
                 {
                   path:"/login",
                   element:<LogIn/>
+                },{
+                  path:'/cart',
+                  element:<AddProducts/>
                 }
             ]
         },

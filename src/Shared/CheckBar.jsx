@@ -1,20 +1,26 @@
 /* eslint-disable react/no-unknown-property */
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { CiShoppingCart } from 'react-icons/ci'
 import { BiSearch } from 'react-icons/bi'
 import { AiOutlineLogin} from 'react-icons/ai'
 import { BsChevronCompactUp } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import { AuthContext } from '../Context/AuthProvider';
+import { AddContext } from '../Context/ProductsContext';
 
 
 // eslint-disable-next-line react/prop-types
 const CheckBar = ({ query, handleQuery, handleClicked }) => {
     const [showProfile, setShowProfile] = useState(false)
     const [showNav, setShowNav] = useState(false)
-    const user = false
-
+    const {user,userLogOut} = useContext(AuthContext)
+    const {totalPrice} = useContext(AddContext)
+    const userOut =()=>{
+        return userLogOut()
+    }
+console.log(totalPrice);
     return (
         <div>
 
@@ -47,7 +53,7 @@ const CheckBar = ({ query, handleQuery, handleClicked }) => {
                     user?   <div onClick={() => setShowProfile(!showProfile)} className='relative cursor-pointer'>
                     <img src="user.jpg" className='w-[35px] h-[35px] rounded-full object-cover' alt="" />
                     <div className={`absolute bg-white z-[2] rounded-lg shadow-lg ${showProfile ? "" : "hidden"}`}>
-                    <AiOutlineLogin/>
+                    <AiOutlineLogin className='mt-5 bg-zinc-50 text-fuchsia-600'onClick={()=> userOut()} /> 
                     </div>
                 </div>: 
                 <Link to={'/register'}>
@@ -55,8 +61,9 @@ const CheckBar = ({ query, handleQuery, handleClicked }) => {
                 </Link>
                   }
 
-                    <Link href='/cart'>
-                        <div className='p-2 bg-gray-100 rounded-full'><CiShoppingCart size={20} /></div>
+                    <Link to={'/cart'} className='relative '>
+                        <div className='p-2 bg-gray-100 rounded-full'><CiShoppingCart size={30} /></div>
+                        <p className='absolute bottom-6	start-8'>0</p>
                     </Link>
 
                     <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>

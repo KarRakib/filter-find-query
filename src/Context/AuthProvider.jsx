@@ -8,7 +8,7 @@ export const AuthContext = createContext()
 const auth = getAuth(app)
 // eslint-disable-next-line react/prop-types
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState({displayName:"kar"})
+    const [user, setUser] = useState(null)
     const [loader, setLoader] = useState(true)
 const userRegister = (email,password) =>{
     setLoader(true)

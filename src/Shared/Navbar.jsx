@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { useContext } from 'react';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../Context/AuthProvider';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types

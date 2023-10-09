@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import  { useState } from 'react';
-import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../Context/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 const RegisterForm = () => {
