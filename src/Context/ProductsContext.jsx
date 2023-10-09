@@ -18,11 +18,11 @@ const ProductContext = ({ children }) => {
     const [size, setSize] = useState(false)
 
 
+    console.log(cartItems, totalPrice);
     let foundProduct;
     let index;
     const addToCart = (product, quantity) => {
         console.log(product);
-        console.log(cartItems, totalPrice);
 
         if (user?.email) {
             const alreadyAddProduct = cartItems.find(cart => cart._id === product._id);

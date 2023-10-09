@@ -6,7 +6,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
       "color": "white",
       "category": "sneakers"
@@ -17,7 +17,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
       "color": "red",
       "category": "sneakers"
@@ -29,7 +29,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
       "color": "green",
       "category": "sneakers"
@@ -40,7 +40,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Adidas",
       "color": "black",
       "category": "sneakers"
@@ -51,7 +51,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Vans",
       "color": "green",
       "category": "flats"
@@ -62,7 +62,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Adidas",
       "color": "black",
       "category": "flats"
@@ -74,7 +74,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Vans",
       "color": "white",
       "category": "flats"
@@ -86,7 +86,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
       "color": "green",
       "category": "sneakers"
@@ -98,7 +98,7 @@
      "star":"tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Adidas",
      "color": "blue",
       "category": "sneakers"
@@ -110,7 +110,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Puma",
      "color": "green",
       "category": "sneakers"
@@ -121,7 +121,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Puma",
      "color": "red",
       "category": "sneakers"
@@ -132,7 +132,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Puma",
      "color": "black",
       "category": "sneakers"
@@ -143,7 +143,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Puma",
      "color": "white",
       "category": "sneakers"
@@ -154,7 +154,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Puma",
      "color": "black",
       "category": "sneakers"
@@ -166,7 +166,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "100",
+      "price": "100",
       "company": "Puma",
      "color": "green",
       "category": "sneakers"
@@ -177,7 +177,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "100",
+      "price": "100",
       "company": "Vans",
      "color": "red",
       "category": "flats"
@@ -188,7 +188,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "100",
+      "price": "100",
       "company": "Vans",
      "color": "white",
       "category": "sandals"
@@ -199,7 +199,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "100",
+      "price": "100",
       "company": "Vans",
      "color": "blue",
       "category": "sandals"
@@ -210,7 +210,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Nike",
      "color": "black",
       "category": "sandals"
@@ -221,7 +221,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Vans",
      "color": "black",
       "category": "heels"
@@ -232,7 +232,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "100",
+      "price": "100",
       "company": "puma",
      "color": "black",
       "category": "heels"
@@ -243,7 +243,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Nike",
      "color": "red",
       "category": "heels"
@@ -254,7 +254,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
      "color": "red",
       "category": "sneakers"
@@ -266,7 +266,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "200",
+      "price": "200",
       "company": "Nike",
      "color": "black",
       "category": "heels"
@@ -277,7 +277,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Adidas",
      "color": "black",
       "category": "heels"
@@ -288,7 +288,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "150",
+      "price": "150",
       "company": "Adidas",
      "color": "white",
       "category": "heels"
@@ -299,7 +299,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Adidas",
      "color": "black",
       "category": "heels"
@@ -310,7 +310,7 @@
       "star": "tara",
       "reviews": "(123 reviews)",
       "prevPrice": "$140,00",
-      "newPrice": "50",
+      "price": "50",
       "company": "Adidas",
      "color": "black",
       "category": "flats"
