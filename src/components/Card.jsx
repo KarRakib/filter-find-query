@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import {AddContext} from '../Context/ProductsContext'
+import { useState } from "react";
 // eslint-disable-next-line react/prop-types
-const Card = ({ img, title,  reviews, _id, newPrice }) => {
+const Card = ({ img, title,  reviews, _id, price,company }) => {
   console.log();
   const {addToCart} = useContext(AddContext)
-  const handleAdd =(title, newPrice,img,_id)=>{
-    const product = {title,newPrice,img,_id, quantity:1}
-    addToCart(product)
+  const [qty, setQty] = useState(1);
+  const handleAdd =(title, price,img,_id)=>{
+    const product = {title,price,img,_id}
+    addToCart({product,quantity:1})
   }
   return (
     <>
@@ -17,9 +19,9 @@ const Card = ({ img, title,  reviews, _id, newPrice }) => {
                     <h2 className="md:card-title text-sm">{title} </h2>
                    <div className="flex justify-between">
                     
-                    <p> ${newPrice}</p>
+                    <p> ${price}</p>
                     <p>{reviews}</p>
-                   <button onClick={()=> handleAdd(title, newPrice,img,_id)} className="flex p-2 rounded-md items-center bg-rose-500 text-white "><CiShoppingCart/> Add  </button>
+                   <button onClick={()=> addToCart({title, price,img,_id,company},qty)} className="flex p-2 rounded-md items-center bg-rose-500 text-white "><CiShoppingCart/> Add  </button>
                    </div>
                     {/* <div className="card-actions justify-end">
                         <Link to='' className="btn btn-primary">Buy Now</Link >

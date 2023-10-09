@@ -6,7 +6,7 @@ import Home from '../Home/Home';
 import Card from '../components/Card';
 import RegisterForm from '../Authentication/Register';
 import LogIn from '../Authentication/LogIn';
-import AddProducts from '../Products/AddProducts';
+import AddOrder from '../Products/AddOrder';
 
 const Route = () => {
   const [products, setProducts] = useState([]);
@@ -55,8 +55,9 @@ const Route = () => {
       star={product.star}
       reviews={product.reviews}
       prevPrice={product.prevPrice}
-      newPrice={product.newPrice}
+      price={product.price}
       _id={product._id}
+      company={product.company}
     />
   ));
     const router = createBrowserRouter([
@@ -77,7 +78,7 @@ const Route = () => {
                   element:<LogIn/>
                 },{
                   path:'/cart',
-                  element:<AddProducts/>
+                  element:<AddOrder/>
                 }
             ]
         },

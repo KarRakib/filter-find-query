@@ -16,17 +16,17 @@ const CheckBar = ({ query, handleQuery, handleClicked }) => {
     const [showProfile, setShowProfile] = useState(false)
     const [showNav, setShowNav] = useState(false)
     const {user,userLogOut} = useContext(AuthContext)
-    const {totalPrice} = useContext(AddContext)
+    const {totalPrice,totalQuantity} = useContext(AddContext)
     const userOut =()=>{
         return userLogOut()
     }
-console.log(totalPrice);
+console.log(totalPrice,totalQuantity);
     return (
         <div>
 
             <div className='flex items-center justify-between py-4 relative'>
                 <div className='flex items-center md:space-x-10 lg:space-x-20'>
-                    <div className='font-semibold text-2xl'><a href="/">SEINE</a></div>
+                    <div className='font-semibold text-2xl'><Link to="/">SEINE</Link></div>
                     <nav className='max-md:hidden'>
                         <ul className='flex items-center lg:space-x-10 space-x-7 opacity-70 text-[15px]'>
                             <Button onClickHandler={handleClicked} value="" title=" All Products" />
@@ -61,9 +61,9 @@ console.log(totalPrice);
                 </Link>
                   }
 
-                    <Link to={'/cart'} className='relative '>
+                    <Link to={'/cart'} className='relative text-rose-500 '>
                         <div className='p-2 bg-gray-100 rounded-full'><CiShoppingCart size={30} /></div>
-                        <p className='absolute bottom-6	start-8'>0</p>
+                        {totalQuantity?<p className='absolute bottom-6 start-8'>{totalQuantity}</p>:<p className='absolute bottom-6	start-8'>0</p>}
                     </Link>
 
                     <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>
