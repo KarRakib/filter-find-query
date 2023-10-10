@@ -2,10 +2,22 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import  { AddContext } from '../Context/ProductsContext';
+import { useState } from 'react';
 
 const AddProducts = () => {
     const {cartItems,totalQuantity,totalPrice,incQty, decQty, addToCart, toggleCartQuantity, removeCart} = useContext(AddContext)
     console.log(cartItems);
+    const copunCode = "KAR24587"
+    const [code, setCode]= useState('')
+    const isDiscount = copunCode === code
+    const discountPrice = totalPrice+parseInt(10)*0.20
+    const handleChange =(e)=>{
+setCode(e.target.value)
+    }
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+        console.log(code);
+    }
     return (
         <div>
             <body className="bg-gray-100">
@@ -24,6 +36,7 @@ const AddProducts = () => {
                             </div>
                             {
                                 cartItems.map(cart=>(
+                                    // eslint-disable-next-line react/jsx-key
                                     <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
                                 <div className="flex w-2/5">
                                     <div className="w-20">
@@ -53,11 +66,7 @@ const AddProducts = () => {
                                 ))
                             }
 
-                           
-
-                           
-
-                            <Link to={'/'} className="flex font-semibold text-indigo-600 text-sm mt-10">
+                                  <Link to={'/'} className="flex font-semibold text-indigo-600 text-sm mt-10">
 
                                 <svg className="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" /></svg>
                                 Continue Shopping
@@ -76,17 +85,20 @@ const AddProducts = () => {
                                     <option>Standard shipping - $10.00</option>
                                 </select>
                             </div>
-                            <div className="py-10">
+                            <form onSubmit={handleSubmit} className="py-6">
                                 <label htmlFor="promo" className="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
-                                <input type="text" id="promo" placeholder="Enter your code" className="p-2 text-sm w-full" />
-                            </div>
-                            <button className="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
-                            <div className="border-t mt-8">
+                                <input onChange={handleChange} name='copun' type="text" id="promo" placeholder="Enter your code" className="p-2  text-sm w-full" />
+                            <button disabled={!isDiscount} type='submit' className="bg-red-500 hover:bg-red-600 px-5 py-2 my-10 text-sm text-white uppercase">Apply</button>
+                            </form>
+                            <div className="border-t mt-3">
                                 <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                                     <span>Total cost</span>
-                                    <span>${totalPrice+parseFloat(10)}</span>
+                                    {isDiscount ?<span>${discountPrice}</span>:<span>${totalPrice+parseFloat(10)}</span>}
                                 </div>
-                                <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
+                                <Link to={{
+                                    pathname:'/payment',
+                                    state:{price:discountPrice}
+                                }} className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</Link>
                             </div>
                         </div>
 

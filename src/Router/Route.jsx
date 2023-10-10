@@ -7,6 +7,8 @@ import Card from '../components/Card';
 import RegisterForm from '../Authentication/Register';
 import LogIn from '../Authentication/LogIn';
 import AddOrder from '../Products/AddOrder';
+import PaymentForm from '../Products/CheckForm';
+import Payment from '../Products/Payment';
 
 const Route = () => {
   const [products, setProducts] = useState([]);
@@ -79,6 +81,10 @@ const Route = () => {
                 },{
                   path:'/cart',
                   element:<AddOrder/>
+                },
+                {
+                  path:'/payment',
+                  element:<Payment/>
                 }
             ]
         },
