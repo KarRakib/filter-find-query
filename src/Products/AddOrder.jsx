@@ -18,6 +18,8 @@ setCode(e.target.value)
         e.preventDefault()
         console.log(code);
     }
+    console.log(import.meta.env.VITE_CLIENT_KEY);
+    console.log(import.meta.env.VITE_SOME_KEY) 
     return (
         <div>
             <body className="bg-gray-100">
@@ -95,10 +97,9 @@ setCode(e.target.value)
                                     <span>Total cost</span>
                                     {isDiscount ?<span>${discountPrice}</span>:<span>${totalPrice+parseFloat(10)}</span>}
                                 </div>
-                                <Link to={{
-                                    pathname:'/payment',
-                                    state:{price:discountPrice}
-                                }} className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</Link>
+                                <Link to='/payment'
+                                    state={{price:discountPrice}}
+                                 className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</Link>
                             </div>
                         </div>
 
