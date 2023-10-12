@@ -43,6 +43,7 @@ const navigate = useNavigate()
         body: formData
       })
     if (res.ok) {
+      console.log('ami achi ');
       const data = await res.json();
       const profile = { displayName: userData.name, photoURL: data.data.url}
       console.log(profile);

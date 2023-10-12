@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import  { useState } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
   const {userLogin} = useContext(AuthContext)
@@ -78,6 +79,7 @@ const LogIn = () => {
             Log In
           </button>
         </form>
+        <div> You haven't not account please  <Link to={'/register'} className='text-blue-500'> Register</Link> </div>
       </div>
     </div>
   );

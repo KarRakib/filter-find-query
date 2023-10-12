@@ -13,8 +13,8 @@ const Card = ({ img, title,  reviews, _id, price,company }) => {
   }
   return (
     <>
-      <div className="card card-compact w-40 md:w-72 bg-base-100 shadow-xl">
-                <figure><img className="md:w-40  h-32 w-24" src={img} alt="Shoes" /></figure>
+      <div className="card card-compact w-72 bg-base-100 shadow-xl border-orange-600">
+                <figure><img className="md:w-40  h-32 w-24 " src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="md:card-title text-sm">{title} </h2>
                    <div className="flex justify-between">

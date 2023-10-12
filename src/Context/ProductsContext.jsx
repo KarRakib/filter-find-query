@@ -38,9 +38,9 @@ const ProductContext = ({ children }) => {
             }
 
             toast.success(`${quantity} ${product.title}`, {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-
+                position: "top-center", // Set the position to "top-center"
+                autoClose: 5000,       // Set the autoClose time to 5000 milliseconds (5 seconds)
+              });
             // Update localStorage here
             localStorage.setItem('cartItems', JSON.stringify([...cartItems, { ...product }]));
         } else {

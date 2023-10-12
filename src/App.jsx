@@ -1,7 +1,8 @@
-import { useContext } from "react";
+
 import AuthProvider from "./Context/AuthProvider";
 import Route from "./Router/Route";
 import ProductContext from "./Context/ProductsContext";
+
 
 
 const App = () => {
@@ -11,7 +12,7 @@ const App = () => {
       <AuthProvider>
         <ProductContext>
           <Route />
-        </ProductContext>
+                  </ProductContext>
       </AuthProvider>
 
     </div>

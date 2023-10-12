@@ -1,16 +1,20 @@
 import Products from "../Products/Products";
+
 import Sidebar from "../SideBar/Sidebar";
-import Button from "../components/Button";
+
 
 
 // eslint-disable-next-line react/prop-types
 const Home = ({ products, handleInputChange, handleClicked, result }) => {
-  return (
-    <div className="grid grid-cols-5 gap-4">
+  // eslint-disable-next-line no-undef
+    return (
+    
+    <div className="grid grid-cols-5 gap-4 py-4">
       <div className="col-span-1">
         <Sidebar handleInputChange={handleInputChange} handleClicked={handleClicked} />
       </div>
       <div className="col-span-4">
+      
         <Products products={products} result={result} />
 
       </div>
