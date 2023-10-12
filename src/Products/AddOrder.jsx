@@ -33,7 +33,7 @@ const AddProducts = () => {
         };
       
         try {
-          const response = await fetch("http://localhost:5000/create-checkout-session", {
+          const response = await fetch("https://e-shop-server-karrakib.vercel.app/create-checkout-session", {
             method: "POST",
             headers,
             body: JSON.stringify(body),
